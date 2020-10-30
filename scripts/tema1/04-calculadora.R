@@ -23,7 +23,50 @@
 # x = D %% d 
 725 - 103*7
 
+250000000%/%60
+250000000%%60
+4166666%/%60
+4166666%%60
+69444%/%24
+69444%%24
+2893%/%365
+2893%%365
+338/
+
+F = function(x){
+  if(substr(x,1,1) == 'x' || substr(x,1,1) == 'X'){
+    n = 1
+    m = substr(x,1,1)
+    o = as.numeric(substr(x,2,3))
+    p = as.numeric(substr(x,5,10))
+    total = (p-o)/n
+  } else {
+    n = as.numeric(substr(x,1,1))
+    if(substr(x,2,2) == 'x' || substr(x,2,2) == 'X'){
+      m = substr(x,2,2)
+      o = as.numeric(substr(x,3,4))
+      p = as.numeric(substr(x,6,10))
+      total = (p-o)/n
+    } else {
+      n = as.numeric(substr(x,1,2))
+      m = substr(x,3,3)
+      o = as.numeric(substr(x,4,5))
+      p = as.numeric(substr(x,7,10))
+      total = (p-o)/n
+    }
+  }
+  print(total)
+} 
+F('x+1=1')
+
+
+
 pi
+
+fun = function(x){sqrt(x)*abs((-x)^3)}
+fun(2)
+abs((-2)^3)
+sqrt(2)
 
 2*pi
 
@@ -52,7 +95,7 @@ c(2^30, 2^(-15), 1, 2, 3/2)
 
 sqrt(25)
 
-exp(1)
+exp(2)
 
 log(pi)
 
@@ -96,6 +139,9 @@ asin(0.8660254) * 180 /pi #arc sin en grados
 asin(5) #arc sin x in [-1,1]
 
 acos(-8)
+
+print(3*exp(1)-pi,4)
+print(Mod((2+3i)^2/(5+8i)),4)
 
 print(sqrt(2),10)
 round(sqrt(2), 3)
